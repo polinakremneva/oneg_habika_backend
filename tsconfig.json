@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "lib": ["es6"],
+    "target": "ES2021",
+    "module": "CommonJS",
     "allowJs": true,
-    "outDir": "./dist",
     "rootDir": "./src",
+    "outDir": "./dist",
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
