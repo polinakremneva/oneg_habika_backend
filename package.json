@@ -4,7 +4,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.ts",
+    "start": "ts-node src/index.ts",
     "dev": "ts-node-dev src/index.ts"
   },
   "keywords": [],
