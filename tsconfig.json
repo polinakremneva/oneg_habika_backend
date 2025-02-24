@@ -4,14 +4,13 @@
     "module": "CommonJS",
     "allowJs": true,
     "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "./public/assets",
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "typeRoots": ["./src/types", "./node_modules/@types"],
-    "types": ["node", "express"]
+    "typeRoots": ["./src/types", "./node_modules/@types"]
   },
-  "include": ["src/**/*", "src/types/**/*"],
-  "exclude": ["node_modules", "build"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
