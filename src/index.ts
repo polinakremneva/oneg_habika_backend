@@ -4,6 +4,7 @@ import cors from "cors";
 import path from "path";
 import ordersRoutes from "./routes/orders.route"; // Import orders routes
 import authRoutes from "./routes/auth.route"; // Import auth routes
+import productsRoutes from "./routes/products.route";
 
 dotenv.config();
 
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 async function main() {
   try {
     // Middleware to serve static files
-    app.use(express.static(path.join(__dirname, "..", "public")));
+    app.use(express.static(path.join(__dirname, "public")));
 
     // Middleware to parse JSON
     app.use(express.json());
@@ -24,10 +25,11 @@ async function main() {
     // API routes
     app.use("/api/orders", ordersRoutes); // Attach orders routes
     app.use("/api/auth", authRoutes); // Attach auth routes
+    app.use("/api/products", productsRoutes);
 
     // Catch-all route for serving frontend
     app.get("*", (req: Request, res: Response) => {
-      res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+      res.sendFile(path.join(__dirname, "public", "index.html"));
     });
 
     // Start the server
